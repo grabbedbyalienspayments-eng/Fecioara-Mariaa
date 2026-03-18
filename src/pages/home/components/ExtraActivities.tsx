@@ -310,7 +310,7 @@ export default function ExtraActivities() {
               style={{ height: img.tall ? '220px' : '180px' }}
             >
               <img
-                src={`/images/--img-seq-.webp
+                src={`/images/${img.seq}.webp`}
                 alt={img.alt}
                 className="w-full h-full object-cover object-top"
               />
