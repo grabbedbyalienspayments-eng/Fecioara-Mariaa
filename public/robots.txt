@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://centrul-educational-fecioara-maria.ro/sitemap.xml
