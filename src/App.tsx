@@ -45,7 +45,7 @@ function App() {
             <button onClick={scrollToTop} className="flex-shrink-0 cursor-pointer transition-all duration-500">
               {/* Desktop logo */}
               <img
-                src="/images/413204403554.webp"
+                src="/images/logo-new.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`hidden lg:block w-auto object-contain transition-all duration-500 ${
                   scrolled ? 'h-16' : 'h-32'
@@ -53,7 +53,7 @@ function App() {
               />
               {/* Mobile logo */}
               <img
-                src="/images/413204403554.webp"
+                src="/images/logo-new.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`lg:hidden w-auto object-contain transition-all duration-500 ${
                   scrolled ? 'h-12' : 'h-24'
