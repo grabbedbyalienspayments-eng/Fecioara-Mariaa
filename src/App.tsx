@@ -39,24 +39,31 @@ function App() {
         }`}
       >
         <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between">
+          <div className="relative flex items-center justify-between">
 
-            {/* Logo - LEFT, size shrinks on scroll */}
-            <button onClick={scrollToTop} className="flex-shrink-0 cursor-pointer transition-all duration-500">
+            {/* Logo - centrat pe mobil cand nu e scrollat, stanga cand e scrollat */}
+            <button
+              onClick={scrollToTop}
+              className={`cursor-pointer transition-all duration-500 flex-shrink-0 ${
+                !scrolled
+                  ? 'absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0'
+                  : 'relative'
+              }`}
+            >
               {/* Desktop logo */}
               <img
-                src="/images/logo-new.webp"
+                src="/images/413204403554.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`hidden lg:block w-auto object-contain transition-all duration-500 ${
-                  scrolled ? 'h-16' : 'h-32'
+                  scrolled ? 'h-24' : 'h-48'
                 }`}
               />
               {/* Mobile logo */}
               <img
-                src="/images/logo-new.webp"
+                src="/images/413204403554.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`lg:hidden w-auto object-contain transition-all duration-500 ${
-                  scrolled ? 'h-12' : 'h-24'
+                  scrolled ? 'h-[4.5rem]' : 'h-36'
                 }`}
               />
             </button>
