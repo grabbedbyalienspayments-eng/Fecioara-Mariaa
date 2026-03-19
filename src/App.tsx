@@ -41,29 +41,29 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="relative flex items-center justify-between">
 
-            {/* Logo - centrat pe mobil cand nu e scrollat, stanga cand e scrollat */}
+            {/* Logo
+                DESKTOP: inainte scroll h-32 * 1.1 = ~140px | dupa scroll h-16 * 1.1 = ~70px
+                MOBIL:   mereu centrat
+                         inainte scroll h-24 * 1.5 = ~144px | dupa scroll h-12 * 1.2 = ~58px
+            */}
             <button
               onClick={scrollToTop}
-              className={`cursor-pointer transition-all duration-500 flex-shrink-0 ${
-                !scrolled
-                  ? 'absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0'
-                  : 'relative'
-              }`}
+              className="cursor-pointer transition-all duration-500 flex-shrink-0 absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0"
             >
               {/* Desktop logo */}
               <img
-                src="/images/413204403554.webp"
+                src="/images/logo-new.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`hidden lg:block w-auto object-contain transition-all duration-500 ${
-                  scrolled ? 'h-24' : 'h-48'
+                  scrolled ? 'h-[70px]' : 'h-[140px]'
                 }`}
               />
               {/* Mobile logo */}
               <img
-                src="/images/413204403554.webp"
+                src="/images/logo-new.webp"
                 alt="Centrul Educational Fecioara Maria"
                 className={`lg:hidden w-auto object-contain transition-all duration-500 ${
-                  scrolled ? 'h-[4.5rem]' : 'h-36'
+                  scrolled ? 'h-[58px]' : 'h-[144px]'
                 }`}
               />
             </button>
@@ -98,10 +98,10 @@ function App() {
               </button>
             </div>
 
-            {/* Mobile Menu Button - RIGHT */}
+            {/* Mobile Menu Button - RIGHT (ml-auto il impinge la dreapta, logoul e absolute centrat) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 cursor-pointer ${
+              className={`lg:hidden ml-auto w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 cursor-pointer ${
                 scrolled 
                   ? 'bg-gray-100 text-gray-900' 
                   : 'bg-white/20 backdrop-blur-md text-white'
